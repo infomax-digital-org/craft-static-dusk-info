@@ -46,7 +46,10 @@
 {% set site = craft.app.sites.getSiteById(selectedSiteId) %}
 
 {# Get all scheduled builds for this site #}
+
+{#
 {% set scheduledBuilds = craft.craftStaticDusk.getScheduledStaticBuilds(site.handle) %}
+#}
 
 {# Get all scheduled builds for this site #}
 {% set buildHistory = craft.craftStaticDusk.getBuildHistory(site.handle) %}
@@ -184,7 +187,7 @@
             </tr>
             </thead>
             <tbody>
-
+            {#
             {% for build in scheduledBuilds %}
                 <tr data-id="0">
                     <td style="text-align: left">
@@ -204,6 +207,7 @@
                     </td>
                 </tr>
             {% endfor %}
+            #}
             </tbody>
         </table>
     </form>
